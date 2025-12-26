@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDT Police – Criminal Code</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:15px;
+}
+h1{
+  text-align:center;
+  color:#ff0000;
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
+
+/* ACCORDION */
+.accordion{
+  background:#111;
+  border-radius:12px;
+  margin-bottom:12px;
+  overflow:hidden;
+  border:1px solid #222;
+}
+.accordion-header{
+  padding:14px;
+  font-weight:bold;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  background:#0d0d0d;
+  color:#fff;
+}
+.accordion-header:hover{
+  background:#1a1a1a;
+}
+.accordion-body{
+  display:none;
+  padding:10px;
+  background:#111;
+}
+
+/* ITEM PASAL */
+.item{
+  background:#151515;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:8px;
+  font-size:14px;
+  border:1px solid #222;
+}
+.item input{
+  margin-right:6px;
+  accent-color:#ff0000;
+}
+
+/* PASAL MERAH (PERSIDANGAN) */
+.item.red{
+  color:#ff3333;
+  font-weight:bold;
+  background:#1a0000;
+  border:1px solid #400000;
+}
+
+/* RESET BUTTON */
+.reset{
+  width:100%;
+  padding:12px;
+  background:#ff0000;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
+.reset:hover{
+  background:#cc0000;
+}
+
+/* TOTAL */
+.total{
+  background:#0d0d0d;
+  margin-top:15px;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  border:1px solid #222;
+}
+.total b{
+  color:#ff0000;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Pasal Kepolisian Daylight rp</h1>
+
+<!-- ================= PASAL A ================= -->
+<div class="accordion">
+<div class="accordion-header" onclick="toggle(this)">
+Pasal A – Pelanggaran Lalu Lintas <span>▼</span>
+</div>
+<div class="accordion-body">
+<div class="item"><label><input type="checkbox" data-denda="500" data-penjara="0" data-impound="1">A01 – Tidak memakai helm</label></div>
+<div class="item"><label><input type="checkbox" data-denda="750" data-penjara="0" data-impound="1">A02 – Melawan arus</label></div>
+<div class="item"><label><input type="checkbox" data-denda="1000" data-penjara="100" data-impound="0">A03 – ngentot</label></div>
+</div>
+</div>
+
+<!-- ================= PASAL B ================= -->
+<div class="accordion">
+<div class="accordion-header" onclick="toggle(this)">
+Pasal B – Pelanggaran Umum <span>▼</span>
+</div>
+<div class="accordion-body">
+<div class="item"><label><input type="checkbox" data-denda="1500" data-penjara="5" data-impound="0">B01 – Mengganggu ketertiban umum</label></div>
+<div class="item"><label><input type="checkbox" data-denda="2000" data-penjara="7" data-impound="0">B02 – Melawan petugas</label></div>
+</div>
+</div>
+
+<!-- ================= PASAL C ================= -->
+<div class="accordion">
+<div class="accordion-header" onclick="toggle(this)">
+Pasal C – Kejahatan Terhadap Properti <span>▼</span>
+</div>
+<div class="accordion-body">
+<div class="item"><label><input type="checkbox" data-denda="3500" data-penjara="10" data-impound="0">C01 – Masuk properti tanpa izin</label></div>
+<div class="item"><label><input type="checkbox" data-denda="4000" data-penjara="11" data-impound="0">C02 – Merusak properti</label></div>
+</div>
+</div>
+
+<!-- ================= PASAL D ================= -->
+<div class="accordion">
+<div class="accordion-header" onclick="toggle(this)">
+Pasal D – Narkotika <span>▼</span>
+</div>
+<div class="accordion-body">
+<div class="item"><label><input type="checkbox" data-denda="3000" data-penjara="12" data-impound="0">D01 – Kepemilikan narkoba ringan</label></div>
+<div class="item red">D02 – Peredaran narkotika (Potensi Persidangan)</div>
+</div>
+</div>
+
+<!-- ================= PASAL E ================= -->
+<div class="accordion">
+<div class="accordion-header" onclick="toggle(this)">
+Pasal E – Senjata & Barang Terlarang <span>▼</span>
+</div>
+<div class="accordion-body">
+<div class="item"><label><input type="checkbox" data-denda="3000" data-penjara="10" data-impound="0">E01 – Senjata tajam/tumpul</label></div>
+<div class="item"><label><input type="checkbox" data-denda="5000" data-penjara="12" data-impound="0">E02-1 – Senjata api ilegal (First)</label></div>
+<div class="item"><label><input type="checkbox" data-denda="6000" data-penjara="15" data-impound="0">E02-2 – Senjata api ilegal (Second)</label></div>
+<div class="item red">E02-3 – Senjata api ilegal (Third) – Persidangan</div>
+<div class="item"><label><input type="checkbox" data-denda="8000" data-penjara="20" data-impound="0">E04 – Jual beli senjata ilegal</label></div>
+</div>
+</div>
+
+<!-- ================= PASAL F ================= -->
+<div class="accordion">
+<div class="accordion-header" onclick="toggle(this)">
+Pasal F – Kejahatan & Terorisme <span>▼</span>
+</div>
+<div class="accordion-body">
+<div class="item"><label><input type="checkbox" data-denda="4000" data-penjara="15" data-impound="2">F01 – Pembegalan</label></div>
+<div class="item"><label><input type="checkbox" data-denda="5000" data-penjara="17" data-impound="2">F02 – Perampokan</label></div>
+<div class="item red">F07 – Terorisme (Persidangan)</div>
+</div>
+</div>
+
+<button class="reset" onclick="resetAll()">Reset</button>
+
+<div class="total">
+<b>Total Denda:</b> $<span id="denda">0</span><br>
+<b>Total Penjara:</b> <span id="penjara">0</span> bulan<br>
+<b>Total Impound:</b> <span id="impound">0</span> hari
+</div>
+
+</div>
+
+<script>
+function toggle(e){
+  let body=e.nextElementSibling;
+  body.style.display=body.style.display==="block"?"none":"block";
+}
+document.querySelectorAll("input").forEach(i=>{
+  i.addEventListener("change",calc);
+});
+function calc(){
+  let d=0,p=0,i=0;
+  document.querySelectorAll("input:checked").forEach(c=>{
+    d+=+c.dataset.denda;
+    p+=+c.dataset.penjara;
+    i+=+c.dataset.impound;
+  });
+  denda.innerText=d;
+  penjara.innerText=p;
+  impound.innerText=i;
+}
+function resetAll(){
+  document.querySelectorAll("input").forEach(c=>c.checked=false);
+  calc();
+}
+</script>
+
+</body>
+</html>
